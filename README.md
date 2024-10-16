@@ -1,8 +1,11 @@
-# React + Vite
+<div align="center">
+  <h1 align="center">Component Structure</h1>
+  <h3>Knowledge of component structure for better readability , scability and efficiency</h3>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+</div>
 
-Currently, two official plugins are available:
+## Links
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Go Through Links For better understanding
+
+- **ReactTabs:** https://www.youtube.com/watch?v=VUuCFw-c2gI&t=1s

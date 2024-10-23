@@ -6,9 +6,11 @@ const RootComponent = () => {
     console.log("Click on RootComponent", index);
   };
 
-  const transFormData = (data)=>{
+  const transFormData = (data) => {
     return data.results;
-  }
+  };
+  const dataPromise = async (query,signal) =>
+    await fetch(`https://swapi.dev/api/people/?search=${query}`,{signal});
   return (
     <div>
       {/* <TabList tabs={tabsList} onTabChange={handleTabClick} /> */}
@@ -21,13 +23,12 @@ const RootComponent = () => {
           label: "",
           input: "",
         }}
+        promise={dataPromise}
         maxItems={5}
         autoComplete={true}
         debounceWait={400}
-        listDisplay={(items) => {
-          <ListBox items={items} />;
-        }}
-        transFormData = {transFormData}
+        listDisplay={(items) => <ListBox items={items} />}
+        transFormData={transFormData}
         errMess={"Not Found"}
         noItemMess={() => <div>Sorry... No such character present</div>}
       />

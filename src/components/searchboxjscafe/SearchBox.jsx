@@ -15,10 +15,12 @@ const SearchBox = ({
   listDisplay,
   errMess,
   noItemMess,
-  transFormData
+  transFormData,
+  promise
 }) => {
   const [query, setQuery] = useState("");
-  const [data,setData,error] = useFetchPromise(query,transFormData);
+  const [data, setData, error] = useFetchPromise(query, transFormData,promise,debounceWait);
+
 
   const handleChange = (e) => {
     const { value } = e.target;
@@ -38,7 +40,7 @@ const SearchBox = ({
         value={query}
         onChange={handleChange}
       />
-      {data && listDisplay(data)}
+      {data && data.length > 0 && listDisplay(data)}
     </>
   );
 };

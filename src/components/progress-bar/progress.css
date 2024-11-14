@@ -1,0 +1,19 @@
+.progress-section{
+    width: 500px;
+    height: 20px;
+    background-color: grey;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.progress-section span{
+    position: absolute;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.progress-section div{
+    height: 100%;
+    width: 20%;
+    background-color: aqua;
+}
